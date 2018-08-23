@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hardware Interaction in VR - Websockets and A-Frame - Switch</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+	<script src="WebSocket.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-box id='bluebox' position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"
+			 change-color="color: blue"
+			 >
+			 </a-box>
+      
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"
+		change-color="color: red">
+		</a-sphere>
+      
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#008000"
+		change-color="color: green">
+      </a-cylinder>
+      
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"
+               event-set__down="_event: mousedown; material.wireframe: true"
+               event-set__up="_event: mouseup; material.wireframe: false"
+               event-set__leave="_event: moulseleave; material.wireframe: false"></a-plane>
+l      
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+      
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
