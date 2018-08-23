@@ -1,3 +1,6 @@
+# Most of this code was taken from https://github.com/Links2004/arduinoWebSockets
+
+
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
 #include <ArduinoOTA.h>
